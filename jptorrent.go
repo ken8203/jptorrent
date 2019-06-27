@@ -22,6 +22,8 @@ var (
 	userAgent   = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.100 Safari/537.36"
 )
 
+// Download the torrent according to ref
+// Will save as ./{ref}.torrent if opts is not specified
 func Download(ref string, opts ...options.Option) error {
 	if ref == "" {
 		return fmt.Errorf("ref can't be empty")
